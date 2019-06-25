@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox fx:id="levelSelect" prefHeight="44.0" prefWidth="192.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.scibag.controllers.LevelSelectController">
+   <children>
+      <VBox alignment="CENTER" fillWidth="false" minWidth="40.0" prefHeight="35.0" prefWidth="35.0" HBox.hgrow="ALWAYS">
+         <children>
+            <CheckBox id="#easy_box" fx:id="easyChoiceCheckBox" alignment="CENTER" mnemonicParsing="false" styleClass="easy" stylesheets="@../css/blue_theme.css" textAlignment="CENTER" />
+            <Label id="#easy_text" alignment="CENTER" prefHeight="17.0" prefWidth="56.0" styleClass="easy" stylesheets="@../css/blue_theme.css" text="Easy" textAlignment="CENTER" />
+         </children>
+         <padding>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="CENTER" fillWidth="false" minWidth="40.0" prefHeight="35.0" prefWidth="35.0" HBox.hgrow="ALWAYS">
+         <children>
+            <CheckBox id="#medium_box" fx:id="mediumChoiceCheckBox" alignment="CENTER" mnemonicParsing="false" styleClass="medium" stylesheets="@../css/blue_theme.css" textAlignment="CENTER" />
+            <Label id="medium_text" alignment="CENTER" prefHeight="17.0" prefWidth="56.0" styleClass="medium" stylesheets="@../css/blue_theme.css" text="Medium" textAlignment="CENTER" />
+         </children>
+         <padding>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="CENTER" fillWidth="false" minWidth="40.0" prefHeight="35.0" prefWidth="35.0" HBox.hgrow="ALWAYS">
+         <children>
+            <CheckBox id="#hard_box" fx:id="hardChoiceCheckBox" alignment="CENTER" mnemonicParsing="false" styleClass="hard" stylesheets="@../css/blue_theme.css" textAlignment="CENTER" />
+            <Label id="#hard_text" alignment="CENTER" prefHeight="17.0" prefWidth="56.0" styleClass="hard" stylesheets="@../css/blue_theme.css" text="Hard" textAlignment="CENTER" />
+         </children>
+         <padding>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </padding>
+      </VBox>
+   </children>
+</HBox>

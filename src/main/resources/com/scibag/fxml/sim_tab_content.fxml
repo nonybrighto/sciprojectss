@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane prefHeight="500.0" prefWidth="700.0" styleClass="background" stylesheets="@../css/blue_theme.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ToolBar fx:id="simToolBar" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <AnchorPane fx:id="simContent" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="simDetailPane" maxWidth="302.0" prefHeight="371.0" prefWidth="302.0" StackPane.alignment="CENTER_RIGHT">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" styleClass="window" stylesheets="@../css/blue_theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox prefHeight="33.0" prefWidth="305.0">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label fx:id="simTitle" alignment="CENTER" styleClass="header" stylesheets="@../css/blue_theme.css" text="Simulation title" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <ImageView fx:id="detailCloseBtn" fitHeight="15.0" fitWidth="15.0" layoutX="4.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="3.0">
+                                 <image>
+                                    <Image url="@/com/scibag/images/icons/close.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="33.0" prefWidth="305.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="availableBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="137.0" styleClass="form_btn" stylesheets="@../css/blue_theme.css" text="Available" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="onlineBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="145.0" styleClass="form_btn" stylesheets="@../css/blue_theme.css" text="Online" HBox.hgrow="ALWAYS" />
+                     </children>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </HBox>
+                  <StackPane fx:id="listStack" prefHeight="150.0" prefWidth="200.0" styleClass="reglist" stylesheets="@../css/blue_theme.css" VBox.vgrow="ALWAYS">
+                     <children>
+                        <ListView fx:id="availableListView" prefHeight="332.0" prefWidth="280.0" styleClass="mylistview" stylesheets="@../css/blue_theme.css">
+                           <StackPane.margin>
+                              <Insets top="5.0" />
+                           </StackPane.margin>
+                        </ListView>
+                        <ListView fx:id="onlineListView" prefHeight="200.0" prefWidth="200.0" styleClass="mylistview" stylesheets="@../css/blue_theme.css">
+                           <StackPane.margin>
+                              <Insets top="5.0" />
+                           </StackPane.margin>
+                        </ListView>
+                     </children>
+                  </StackPane>
+               </children>
+            </VBox>
+         </children>
+         <StackPane.margin>
+            <Insets top="45.0" />
+         </StackPane.margin>
+      </AnchorPane>
+   </children>
+</StackPane>

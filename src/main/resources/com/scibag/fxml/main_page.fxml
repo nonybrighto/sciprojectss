@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/blue_theme.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.scibag.main.MainController">
+   <children>
+      <MenuBar fx:id="mainMenuBar">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Plugin">
+            <items>
+                  <Menu mnemonicParsing="false" text="Add Plugin">
+                    <items>
+                      <MenuItem fx:id="pluginFileMenuItem" mnemonicParsing="false" text="Add From File" />
+                        <MenuItem fx:id="pluginDownloadMenuItem" mnemonicParsing="false" text="Download Plugin" />
+                    </items>
+                  </Menu>
+                  <MenuItem fx:id="devPageMenuItem" mnemonicParsing="false" text="Upload Plugin" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane prefHeight="34.0" prefWidth="600.0" styleClass="topbar">
+         <children>
+            <ImageView fx:id="mainMenuButton" fitHeight="30.0" fitWidth="30.0" layoutX="-27.0" layoutY="-55.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../images/icons/menu_blue.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="mainMenuTitle" alignment="CENTER" text="Label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <StackPane fx:id="pageStack" prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+   </children>
+</VBox>

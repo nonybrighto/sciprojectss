@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="508.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="32.0" layoutY="14.0" prefHeight="200.0" prefWidth="100.0" styleClass="window" stylesheets="@../css/blue_theme.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <AnchorPane prefHeight="155.0" prefWidth="486.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/app_logo.png" />
+                           </image></ImageView>
+                        <Label prefHeight="137.0" prefWidth="227.0" styleClass="app_logo" stylesheets="@../css/blue_theme.css" text="Scibag">
+                           <effect>
+                              <InnerShadow blurType="ONE_PASS_BOX" color="#070707b5" height="25.45" radius="8.8875" width="12.1" />
+                           </effect></Label>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <VBox VBox.vgrow="ALWAYS">
+               <children>
+                  <AnchorPane prefHeight="125.0" prefWidth="486.0">
+                     <children>
+                        <Label alignment="TOP_CENTER" prefHeight="122.0" prefWidth="486.0" text="Scibag is a software devloped as a final year project by Onwukwe Chinonso Bright for Bluecrest University college. The software provides an environment where students can be able to learn by viewing simulations and also perform calculations. It also serves as an assistant to teachers and lecturers by helping them make demonstrations in class in other to help students understand a particular topic. " textAlignment="JUSTIFY" wrapText="true">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <HBox alignment="CENTER" prefHeight="161.0" prefWidth="486.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="156.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/bluecrest_logo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <AnchorPane prefHeight="31.0" prefWidth="486.0" styleClass="header" stylesheets="@../css/blue_theme.css">
+               <children>
+                  <Label alignment="CENTER" text="Copyright © 2017" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="526.0" prefWidth="621.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox maxWidth="230.0" prefHeight="526.0" prefWidth="230.0" styleClass="nav" stylesheets="@../css/blue_theme.css">
+               <children>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="13.0" prefWidth="192.0">
+                     <children>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="0.0">
+                           <image>
+                              <Image url="@../../../../../../../../Pictures/ICONS/older%20icons/DELETE_CLOSE%20ICON/close.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </AnchorPane>
+                  
+                  <fx:include fx:id="levelSelect" source="level_select_inflater.fxml" />
+                  <AnchorPane prefHeight="30.0" prefWidth="203.0">
+                     <children>
+                        <ChoiceBox fx:id="viewChoiceBox" prefWidth="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  
+                  <Label text="Courses" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <SplitPane dividerPositions="0.6962025316455697" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" VBox.vgrow="ALWAYS">
+                     <items>
+                         <fx:include fx:id="courselistview" source="course_list_inflater.fxml" />
+                        <VBox prefHeight="200.0" prefWidth="100.0" styleClass="nav" stylesheets="@../css/blue_theme.css" />
+                     </items>
+                  </SplitPane>
+               </children>
+            </VBox>
+            <StackPane fx:id="choiceStack" HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <AnchorPane prefHeight="45.0" prefWidth="524.0">
+                           <children>
+                              <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="213.0" text="pluginSelectLabel" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="150.0" />
+                              <TextField layoutX="182.0" layoutY="10.0" maxWidth="350.0" AnchorPane.rightAnchor="3.0" />
+                           </children>
+                        </AnchorPane>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" VBox.vgrow="ALWAYS" styleClass="edge-to-edge">
+                           <content>
+                              <TilePane fx:id="bookTile" hgap="10.0" prefHeight="200.0" prefWidth="373.0" vgap="10.0">
+                                 <padding>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </padding>
+                              </TilePane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
